@@ -12,34 +12,34 @@ variable "tags" {
    description = "A map of tags to assign to resources"
   type=map(string)
 }
-variable "name" {
-  description = "The name of the storage account"
-  type        = string
-}
+# variable "name" {
+#   description = "The name of the storage account"
+#   type        = string
+# }
 
 
-variable "storageLocation" {
-  description = "The location/region where the storage account will be created"
-  type        = string
-}
+# variable "storageLocation" {
+#   description = "The location/region where the storage account will be created"
+#   type        = string
+# }
 
-variable "container_name" {
-  description = "The name of the storage container"
-  type        = string
-}
-variable "vnet_name" {
-  description = "The name of the Virtual Network"
-  type        = string
-}
+# variable "container_name" {
+#   description = "The name of the storage container"
+#   type        = string
+# }
+# variable "vnet_name" {
+#   description = "The name of the Virtual Network"
+#   type        = string
+# }
 
-variable "subnet_name" {
-  description = "The name of the Subnet"
-  type        = string
-}
-variable "vnetLocation" {
-  description = "The location/region where the vnet account will be created"
-  type        = string
-}
+# variable "subnet_name" {
+#   description = "The name of the Subnet"
+#   type        = string
+# }
+# variable "vnetLocation" {
+#   description = "The location/region where the vnet account will be created"
+#   type        = string
+# }
 # variable "app_service_name" {
 #   description = "The name of the App Service."
 #   type        = string
