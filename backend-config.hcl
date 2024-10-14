@@ -1,4 +1,4 @@
-resource_group_name = "zion-rg-terraform-state"
-storage_account_name  = "zcstfstateaccount"
-container_name        = "ziontfstatecontainer"
-key                   = "terra.tfstate"    
+resource_group_name = "myresourcegroup75691"
+storage_account_name  = "mystorage80"
+container_name        = "mycontainer90"
+key                   = "terraform.tfstate"    
