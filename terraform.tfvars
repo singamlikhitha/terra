@@ -2,7 +2,7 @@ rgName         = "myresourcegroup75691"
 location       = "West US"
 
 tags = {
-  client      = "zcs devops"
+  client      = "zcs devope"
   Environment = "Development"
   Project     = "project-RG1"
   count       = 3
