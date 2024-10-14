@@ -15,21 +15,21 @@ provider "azurerm" {
   }
   subscription_id = "e21901bf-488a-4ded-b169-b694737e4c86"
 }
-module "resource_group" {
-  source   = "./modules/resource_group"
-  rgName   = var.rgName
-  location = var.location
-  tags     = var.tags
+# module "resource_group" {
+#   source   = "./modules/resource_group"
+#   rgName   = var.rgName
+#   location = var.location
+#   tags     = var.tags
 
- }
+#  }
 
-# module "storageaccount" {
-#   source          = "./modules/storage_account"
-#   name            = var.name
-#   rgName          = var.rgName
-#   storageLocation = var.storageLocation
-#   container_name  = var.container_name
-# }
+module "storageaccount" {
+  source          = "./modules/storage_account"
+  name            = var.name
+  rgName          = var.rgName
+  storageLocation = var.storageLocation
+  container_name  = var.container_name
+}
 
 # module "vnet" {
 #   source               = "./modules/vnet"

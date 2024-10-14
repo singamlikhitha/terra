@@ -1,5 +1,5 @@
-rgName         = "myresourcegroupzcs"
-location       = "West US"
+# rgName         = "myresourcegroupzcs"
+# location       = "West US"
 
 tags = {
   client      = "zcs devope"
@@ -7,9 +7,9 @@ tags = {
   Project     = "project-RG1"
   count       = 3
 }
-# container_name= "mycontainer0"
-# name="mystorage7997"
-# storageLocation="East us"
+container_name= "mycontainer0"
+name="mystorage7997"
+storageLocation="East us"
 # vnet_name="myvnet8980"
 # subnet_name="mysubnet4655"
 app_service_name="myappservice5551"
