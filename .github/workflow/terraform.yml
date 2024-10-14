@@ -1,0 +1,51 @@
+name: Deploy Azure Resource Groups with Terraform
+
+on:
+  push:
+    branches:
+      - main
+      - "*"
+    # paths:
+    #   - 'terraform/terraform.tfvars'    
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.0.0
+      
+      - name: Debug Working Directory and Files
+        run: |
+          echo "Current working directory: $(pwd)"
+          echo "List of files:"
+          ls -R   # List all files recursively to see if modules directory exists
+        continue-on-error: true  
+    
+      - name: Terraform Init
+        working-directory: ./terraform
+        env:
+          ARM_CLIENT_ID: ${{ secrets.ZION_INFRA_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.ZION_INFRA_CLIENT_SECRET }}
+          ARM_TENANT_ID: ${{ secrets.ZION_INFRA_TENANT_ID }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.ZION_INFRA_SUBSCRIPTION_ID }}
+        run: | 
+          echo "Current working directory: $(pwd)"
+          terraform init #-backend-config=backend-config.hcl
+
+      - name: Terraform Apply
+        working-directory: ./terraform
+        env:
+          ARM_CLIENT_ID: ${{ secrets.ZION_INFRA_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.ZION_INFRA_CLIENT_SECRET }}
+          ARM_TENANT_ID: ${{ secrets.ZION_INFRA_TENANT_ID }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.ZION_INFRA_SUBSCRIPTION_ID }}
+        run: |
+          # Run Terraform apply
+          terraform apply -auto-approve
