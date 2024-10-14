@@ -1,4 +1,4 @@
-rgName         = "myresourcegroup75691"
+rgName         = "myresourcegroup756915"
 location       = "West US"
 
 tags = {
