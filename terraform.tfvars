@@ -1,12 +1,12 @@
 rgName         = "myresourcegroup12"
 location       = "West US"
 
-# tags = {
-#   client      = "zcs devops"
-#   Environment = "Development"
-#   Project     = "project-RG1"
-#   count       = 3
-# }
+tags = {
+  client      = "zcs devops"
+  Environment = "Development"
+  Project     = "project-RG1"
+  count       = 3
+}
 # container_name= "mycontainer0"
 # name="mystorage7997"
 # storageLocation="East us"
