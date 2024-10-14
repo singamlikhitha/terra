@@ -13,21 +13,21 @@ module "resource_group" {
 
  }
 
-module "storageaccount" {
-  source          = "./modules/storage_account"
-  name            = var.name
-  rgName          = var.rgName
-  storageLocation = var.storageLocation
-  container_name  = var.container_name
-}
+# module "storageaccount" {
+#   source          = "./modules/storage_account"
+#   name            = var.name
+#   rgName          = var.rgName
+#   storageLocation = var.storageLocation
+#   container_name  = var.container_name
+# }
 
-module "vnet" {
-  source               = "./modules/vnet"
-  vnet_name = var.vnet_name
-  location             = var.location
-  rgName  = var.rgName
-  subnet_name = var.subnet_name
-}
+# module "vnet" {
+#   source               = "./modules/vnet"
+#   vnet_name = var.vnet_name
+#   location             = var.location
+#   rgName  = var.rgName
+#   subnet_name = var.subnet_name
+# }
 # module "my_app_service" {
 #   source  = "./modules/app_service"
 #   resource_group_name=  var.rgName
