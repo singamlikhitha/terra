@@ -1,5 +1,5 @@
 rgName         = "myresourcegroupzcs"
- location       = "West US"
+ location       = "East US"
 
 tags = {
   client      = "zcs devope"
